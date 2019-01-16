@@ -1,0 +1,100 @@
+2019-01-16 09:51:14,301 [16] ERROR LogHelper - InerstDoc Exception message {0}
+System.InvalidOperationException: Cannot determine compressed stream type. Supported Archive Formats: Zip, GZip, Tar, Rar, 7Zip
+   在 SharpCompress.Archives.ArchiveFactory.Open(FileInfo fileInfo, ReaderOptions options)
+   在 SharpCompress.Archives.ArchiveFactory.Open(String filePath, ReaderOptions options)
+   在 todo.Server.InsertDocument.startInsert(String filePath, String zipFileName, String orderId) 位置 D:\GitHub\Azure\DocumentDB-Quickstart-DotNet\src\Server\InsertDocument.cs:行号 33
+   在 todo.Controllers.ItemController.<InsertAsync>d__5.MoveNext() 位置 D:\GitHub\Azure\DocumentDB-Quickstart-DotNet\src\Controllers\ItemController.cs:行号 82
+2019-01-16 09:59:59,343 [7] ERROR LogHelper - InerstDoc Exception message {0}
+System.InvalidOperationException: Cannot determine compressed stream type. Supported Archive Formats: Zip, GZip, Tar, Rar, 7Zip
+   在 SharpCompress.Archives.ArchiveFactory.Open(FileInfo fileInfo, ReaderOptions options)
+   在 SharpCompress.Archives.ArchiveFactory.Open(String filePath, ReaderOptions options)
+   在 todo.Server.InsertDocument.startInsert(String filePath, String zipFileName, String orderId) 位置 D:\GitHub\Azure\DocumentDB-Quickstart-DotNet\src\Server\InsertDocument.cs:行号 33
+   在 todo.Controllers.ItemController.<InsertAsync>d__5.MoveNext() 位置 D:\GitHub\Azure\DocumentDB-Quickstart-DotNet\src\Controllers\ItemController.cs:行号 82
+2019-01-16 10:05:58,739 [7] ERROR LogHelper - InerstDoc Exception message {0}
+Newtonsoft.Json.JsonSerializationException: Error getting value from 'ReadTimeout' on 'System.Web.HttpInputStream'. ---> System.InvalidOperationException: 此流上不支持超时。
+   在 System.IO.Stream.get_ReadTimeout()
+   在 GetReadTimeout(Object )
+   在 Newtonsoft.Json.Serialization.DynamicValueProvider.GetValue(Object target)
+   --- 内部异常堆栈跟踪的结尾 ---
+   在 Newtonsoft.Json.Serialization.DynamicValueProvider.GetValue(Object target)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.CalculatePropertyValues(JsonWriter writer, Object value, JsonContainerContract contract, JsonProperty member, JsonProperty property, JsonContract& memberContract, Object& memberValue)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeObject(JsonWriter writer, Object value, JsonObjectContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeValue(JsonWriter writer, Object value, JsonContract valueContract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerProperty)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeObject(JsonWriter writer, Object value, JsonObjectContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeValue(JsonWriter writer, Object value, JsonContract valueContract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerProperty)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeObject(JsonWriter writer, Object value, JsonObjectContract contract, JsonProperty member, JsonContainerContract collectionContract, JsonProperty containerProperty)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.SerializeValue(JsonWriter writer, Object value, JsonContract valueContract, JsonProperty member, JsonContainerContract containerContract, JsonProperty containerProperty)
+   在 Newtonsoft.Json.Serialization.JsonSerializerInternalWriter.Serialize(JsonWriter jsonWriter, Object value, Type objectType)
+   在 Newtonsoft.Json.JsonSerializer.SerializeInternal(JsonWriter jsonWriter, Object value, Type objectType)
+   在 Newtonsoft.Json.JsonSerializer.Serialize(JsonWriter jsonWriter, Object value)
+   在 Newtonsoft.Json.Linq.JToken.FromObjectInternal(Object o, JsonSerializer jsonSerializer)
+   在 Newtonsoft.Json.Linq.JObject.FromObject(Object o, JsonSerializer jsonSerializer)
+   在 Newtonsoft.Json.Linq.JObject.FromObject(Object o)
+   在 Microsoft.Azure.Documents.Document.FromObject(Object document, JsonSerializerSettings settings)
+   在 Microsoft.Azure.Documents.Client.DocumentClient.<ReplaceDocumentPrivateAsync>d__191.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 Microsoft.Azure.Documents.BackoffRetryUtility`1.<>c__DisplayClass1_0.<<ExecuteAsync>b__0>d.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 Microsoft.Azure.Documents.BackoffRetryUtility`1.<ExecuteRetryAsync>d__5.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 Microsoft.Azure.Documents.ShouldRetryResult.ThrowIfDoneTrying(ExceptionDispatchInfo capturedException)
+   在 Microsoft.Azure.Documents.BackoffRetryUtility`1.<ExecuteRetryAsync>d__5.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 Microsoft.Azure.Documents.BackoffRetryUtility`1.<ExecuteAsync>d__1.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 Microsoft.Azure.Documents.Client.DocumentClient.<ReplaceDocumentInlineAsync>d__190.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 todo.DocumentDBRepository`1.<UpdateItemAsync>d__11.MoveNext() 位置 D:\GitHub\Azure\DocumentDB-Quickstart-DotNet\src\DocumentDBRepository.cs:行号 75
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   在 todo.Controllers.ItemController.<InsertAsync>d__5.MoveNext() 位置 D:\GitHub\Azure\DocumentDB-Quickstart-DotNet\src\Controllers\ItemController.cs:行号 83
+2019-01-16 10:12:08,314 [24] ERROR LogHelper - 
+----------------出错开始-------------------
+System.IO.IOException: 文件“D:\GitHub\Azure\DocumentDB-Quickstart-DotNet\src\File\00000.zip”正由另一进程使用，因此该进程无法访问此文件。
+   在 System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   在 System.IO.FileStream.Init(String path, FileMode mode, FileAccess access, Int32 rights, Boolean useRights, FileShare share, Int32 bufferSize, FileOptions options, SECURITY_ATTRIBUTES secAttrs, String msgPath, Boolean bFromProxy, Boolean useLongPath, Boolean checkHost)
+   在 System.IO.FileStream..ctor(String path, FileMode mode, FileAccess access, FileShare share, Int32 bufferSize, FileOptions options, String msgPath, Boolean bFromProxy)
+   在 System.IO.FileStream..ctor(String path, FileMode mode)
+   在 System.Web.HttpPostedFile.SaveAs(String filename)
+   在 System.Web.HttpPostedFileWrapper.SaveAs(String filename)
+   在 todo.Controllers.ItemController.<InsertAsync>d__5.MoveNext() 位置 D:\GitHub\Azure\DocumentDB-Quickstart-DotNet\src\Controllers\ItemController.cs:行号 76
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   在 System.Threading.Tasks.TaskHelpersExtensions.ThrowIfFaulted(Task task)
+   在 System.Web.Mvc.Async.TaskAsyncActionDescriptor.EndExecute(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeAsynchronousActionMethod>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+----------------出错结束-------------------
+
